@@ -21,8 +21,6 @@
 				<fadetime>2000</fadetime>
 				<imagepath background="true">$VAR[VizBackgroundVar]</imagepath>
 				<animation effect="fade" start="100" end="20" time="0" condition="![StringCompare(Visualisation.Name,waveform) | StringCompare(Visualisation.Name,opengl spectrum) | StringCompare(Visualisation.Name,directx spectrum) | IsEmpty(Visualisation.Name)] + !Skin.HasSetting(HideVisualizationFanart)">Conditional</animation>
-				<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">Conditional</animation>
-				<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(Enable.AnimatedBackgrounds)">Conditional</animation>
 			</control>
 		</control>
 		<control type="group">
@@ -80,7 +78,7 @@
 		<!-- media infos -->
 		<control type="fadelabel">
 			<left>0</left>
-			<top>0</top>
+			<top>-20</top>
 			<heigth>1080</heigth>
 			<width>FullScreenWidth</width>
 			<scroll>true</scroll>
@@ -98,7 +96,7 @@
 		</control>
 		<control type="fadelabel">
 			<left>0</left>
-			<top>0</top>
+			<top>-20</top>
 			<heigth>1920</heigth>
 			<width>1080</width>
 			<scroll>true</scroll>
@@ -117,7 +115,7 @@
 		</control>
 		<control type="group">
 			<left>0</left>
-			<top>540</top>
+			<top>520</top>
 			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
