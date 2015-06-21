@@ -204,15 +204,15 @@
 					<texturenofocus border="1">separator5.png</texturenofocus>
 					<onfocus>Skin.Reset(ItemToEdit.Widget)</onfocus>
 					<onfocus>Skin.Reset(ItemToEdit.WidgetLabel)</onfocus>
-					<onfocus>Skin.Reset(ItemToEdit.WidgetType)</onfocus>									
+					<onfocus>Skin.Reset(ItemToEdit.WidgetType)</onfocus>
 					<onclick>SetProperty(Nox.Widget,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.Widget],home)</onclick>
 					<onclick>SetProperty(Nox.WidgetLabel,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetLabel],home)</onclick>
 					<onclick>SetProperty(Nox.WidgetType,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetType],home)</onclick>
 					<onclick>SetProperty(Nox.WidgetStyle,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetStyle],home)</onclick>
 					<onclick>ActivateWindow(1124)</onclick>
-				</control>				
+				</control>
 				<control type="button" id="90050">
-				<!-- Widget: -->
+					<!-- Widget: -->
 					<!-- 2: Random Movies    -->
 					<!-- 5: Random Episodes    -->
 					<!-- 6: Recommended Episodes  -->
@@ -238,12 +238,12 @@
 					<!-- 33: Top Rated TV Shows -->
 					<!-- 34: On Air TV Shows -->
 					<!-- 35: Airing Today TV Shows -->
-					<!-- 36: Trending Movies -->					
+					<!-- 36: Trending Movies -->
 					<!-- 37: Trending Shows -->
 					<!-- 41: Near Events -->
 					<!-- 42: Daily Babe -->
-					<!-- 43: Daily Babes -->					
-				<!-- WidgetType: -->
+					<!-- 43: Daily Babes -->
+					<!-- WidgetType: -->
 					<!-- 1: Movie    -->
 					<!-- 2: Music Albums    -->
 					<!-- 3: Weather  -->
@@ -251,17 +251,17 @@
 					<!-- 5: Music Videos -->
 					<!-- 7: Picture Addons -->
 					<!-- 8: Addons -->
-					<!-- 9: Music Songs -->					
+					<!-- 9: Music Songs -->
 					<!-- 20: Video Playlist -->
-					<!-- 21: Music Playlist -->					
+					<!-- 21: Music Playlist -->
 					<!-- 40: Rotten Tomatoes - Extended Info -->
 					<!-- 41: The MovieDB - Movie - Extended Info -->
-					<!-- 42: Trakt.It - Trending Movies - Extended Info -->	
-					<!-- 43: Trakt.It - Trending Shows - Extended Info -->				
+					<!-- 42: Trakt.It - Trending Movies - Extended Info -->
+					<!-- 43: Trakt.It - Trending Shows - Extended Info -->
 					<!-- 44: The MovieDB - TV Shows - Extended Info -->
 					<!-- 45: LastFM - Near Events - Extended Info -->
 					<!-- 47: Daily Babe/s - Extended Info -->
-				<!-- WidgetStyles: -->
+					<!-- WidgetStyles: -->
 					<!-- 1: Classic    -->
 					<!-- 2: Cover    -->
 					<!-- 3: Glass Cover  -->
@@ -269,43 +269,43 @@
 					<!-- 5: Music/App Cover-->
 					<!-- 6: Music/App Glass Cover -->
 					<!-- 7: Landscape -->
-					<!-- 8: Fanart
+					<!-- 8: Fanart -->
 					<!-- 9: Fanart and Logo -->
 					<!-- 10: Logo -->
 					<!-- 11: ClearArt -->
-					<!-- 12: DiscArt
+					<!-- 12: DiscArt -->
 					<!-- 13: TV Character Art -->
 					<!-- 14: Banner -->
 					<!-- 15: Clear Case  -->
-					<!-- 16: Weather Classic  -->					
-					<description>Widget Style Button</description>					
+					<!-- 16: Weather Classic  -->
+					<description>Widget Style Button</description>
 					<width>1316</width>
 					<height>90</height>
 					<textoffsetx>30</textoffsetx>
 					<font>font15</font>
-					<label>Widget Style</label>		
-					<label2>$INFO[Container(90000).ListItem.Property(WidgetStyle),[COLOR labelheader],[/COLOR]]</label2>					
-					<texturenofocus border="1">separator5.png</texturenofocus>					
-					<onfocus>Skin.Reset(ItemToEdit.WidgetStyle)</onfocus>				
-					<onclick>SetProperty(Nox.WidgetStyle,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetStyle],home)</onclick>				
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),1)">SetProperty(AllowedStyles,_1_2_3_4_7_8_9_10_11_12_14_15_,home)</onclick>				
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),2)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>									
+					<label>Widget Style</label>
+					<label2>$INFO[Container(90000).ListItem.Property(WidgetStyle),[COLOR labelheader],[/COLOR]]</label2>
+					<texturenofocus border="1">separator5.png</texturenofocus>
+					<onfocus>Skin.Reset(ItemToEdit.WidgetStyle)</onfocus>
+					<onclick>SetProperty(Nox.WidgetStyle,$INFO[Container(90000).ListItem.Property(Item),,HomeItem.WidgetStyle],home)</onclick>
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),1)">SetProperty(AllowedStyles,_1_2_3_4_7_8_9_10_11_12_14_15_,home)</onclick>
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),2)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>
 					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),3)">SetProperty(AllowedStyles,_16_,home)</onclick>
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),4)">SetProperty(AllowedStyles,_1_2_3_4_7_8_9_10_11_13_14_15_,home)</onclick>				
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),5)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>				
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),7)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>				
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),4)">SetProperty(AllowedStyles,_1_2_3_4_7_8_9_10_11_13_14_15_,home)</onclick>
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),5)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),7)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>
 					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),8)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),9)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>					
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),10)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>					
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),9)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),10)">SetProperty(AllowedStyles,_1_5_6_8_,home)</onclick>
 					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),20)">SetProperty(AllowedStyles,_1_2_3_4_7_8_9_10_11_14_15_,home)</onclick>
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),21)">SetProperty(AllowedStyles,_1_5_6_7_8_9_10_14_,home)</onclick>					
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),40)">SetProperty(AllowedStyles,_1_2_3_4_15_,home)</onclick>				
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),41)">SetProperty(AllowedStyles,_1_2_3_4_8_15_,home)</onclick>				
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),42)">SetProperty(AllowedStyles,_1_2_3_4_8_15_,home)</onclick>				
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),43)">SetProperty(AllowedStyles,_1_2_3_4_8_14_15_,home)</onclick>				
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),21)">SetProperty(AllowedStyles,_1_5_6_7_8_9_10_14_,home)</onclick>
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),40)">SetProperty(AllowedStyles,_1_2_3_4_15_,home)</onclick>
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),41)">SetProperty(AllowedStyles,_1_2_3_4_8_15_,home)</onclick>
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),42)">SetProperty(AllowedStyles,_1_2_3_4_8_15_,home)</onclick>
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),43)">SetProperty(AllowedStyles,_1_2_3_4_8_14_15_,home)</onclick>
 					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),44)">SetProperty(AllowedStyles,_1_2_3_4_8_15_,home)</onclick>
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),45)">SetProperty(AllowedStyles,_1_5_6_,home)</onclick>					
-					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),47)">SetProperty(AllowedStyles,_1_2_3_,home)</onclick>										
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),45)">SetProperty(AllowedStyles,_1_5_6_,home)</onclick>
+					<onclick condition="StringCompare(Container(90000).ListItem.Property(WidgetType),47)">SetProperty(AllowedStyles,_1_2_3_,home)</onclick>
 					<onclick>ActivateWindow(1199)</onclick>
 				</control>
 				<control type="button" id="90015">
