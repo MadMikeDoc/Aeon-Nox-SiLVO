@@ -404,28 +404,28 @@
 			<!-- Widget Panel-->
 			<control type="group">
 				<animation effect="rotatex" start="0" end="90" time="200" center="221,0" tween="sine" easing="inout" condition="Skin.HasSetting(HomeInfo)">conditional</animation>
-				<animation effect="fade" start="100" end="0" time="100" center="221,0" condition="Skin.HasSetting(HomeInfo)">conditional</animation>			
+				<animation effect="fade" start="100" end="0" time="100" center="221,0" condition="Skin.HasSetting(HomeInfo)">conditional</animation>
 				<!-- Panel Background-->
 				<control type="group">
 					<include>WP-PanelVisible</include>
 					<control type="image">
-						<include>WP-LabelBackground</include>						
+						<include>WP-LabelBackground</include>
 					</control>
 					<control type="image">
-						<include>WP-LabelBackground2</include>			
+						<include>WP-LabelBackground2</include>
 					</control>
 					<control type="image">
-						<include>WP-LabelBackground3</include>							
+						<include>WP-LabelBackground3</include>
 					</control>
 					<control type="image">
-						<include>WP-Background</include>								
-					</control>					
-					<control type="label">						
-						<include>WP-Label</include>							
-						<label>$INFO[Container(9000).ListItem.Property(WidgetLabel)]</label>						
+						<include>WP-Background</include>
 					</control>
 					<control type="label">
-						<include>WP-Label2</include>	
+						<include>WP-Label</include>
+						<label>$INFO[Container(9000).ListItem.Property(WidgetLabel)]</label>
+					</control>
+					<control type="label">
+						<include>WP-Label2</include>
 						<label>$INFO[Container(8001).ListItem.Label]</label>
 						<visible>Control.HasFocus(8001)</visible>
 					</control>
@@ -452,540 +452,540 @@
 						<animation effect="rotate" start="360" end="0" center="auto" time="2000" loop="true" condition="true">conditional</animation>
 					</control>
 				</control>
-				<!-- Cover -->			
-				<control type="panel" id="8001">				
-					<include>WP-PanelPortrait</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),Cover)</visible>				
-					<itemlayout height="305" width="216">
-						<control type="image">
-							<description>Cover</description>
-							<include>WP-PanelImagePortrait</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>												
-						</control>												
-					</itemlayout>
-					<focusedlayout height="305" width="216">					
-						<control type="image">
-							<description>Cover</description>
-							<include>WP-PanelImagePortrait</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>							
-						</control>
-						<control type="image">
-							<include>WP-PanelImagePortrait</include>
-							<include>WP-FocusImageTexture</include>							
-						</control>										
-					</focusedlayout>			
-					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>					
-				</control>
-				<!-- Glass Cover -->
+				<!-- Cover -->
 				<control type="panel" id="8001">
-					<include>WP-PanelPortrait</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),GlassCover)</visible>				
+					<include>WP-PanelPortrait</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),Cover)</visible>
 					<itemlayout height="305" width="216">
 						<control type="image">
 							<description>Cover</description>
-							<include>WP-PanelImagePortraitGlass</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>													
-						</control>						
-						<control type="image">
-							<description>Glass Overlay</description>
-							<include>WP-PanelImagePortraitGlassOverlay</include>	
-							<texture>thumbs/boxes/poster_shadow.png</texture>													
-						</control>											
+							<include>WP-PanelImagePortrait</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="216">
 						<control type="image">
 							<description>Cover</description>
-							<include>WP-PanelImagePortraitGlass</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>													
-						</control>						
-						<control type="image">
-							<description>Glass Overlay</description>
-							<include>WP-PanelImagePortraitGlassOverlay</include>	
-							<texture>thumbs/boxes/poster_shadow.png</texture>													
+							<include>WP-PanelImagePortrait</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
 						</control>
 						<control type="image">
 							<include>WP-PanelImagePortrait</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>						
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
+					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
+				</control>
+				<!-- Glass Cover -->
+				<control type="panel" id="8001">
+					<include>WP-PanelPortrait</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),GlassCover)</visible>
+					<itemlayout height="305" width="216">
+						<control type="image">
+							<description>Cover</description>
+							<include>WP-PanelImagePortraitGlass</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
+						</control>
+						<control type="image">
+							<description>Glass Overlay</description>
+							<include>WP-PanelImagePortraitGlassOverlay</include>
+							<texture>thumbs/boxes/poster_shadow.png</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout height="305" width="216">
+						<control type="image">
+							<description>Cover</description>
+							<include>WP-PanelImagePortraitGlass</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
+						</control>
+						<control type="image">
+							<description>Glass Overlay</description>
+							<include>WP-PanelImagePortraitGlassOverlay</include>
+							<texture>thumbs/boxes/poster_shadow.png</texture>
+						</control>
+						<control type="image">
+							<include>WP-PanelImagePortrait</include>
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
 				</control>
 				<!-- Case -->
 				<control type="panel" id="8001">
-					<include>WP-PanelPortrait</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),Case)</visible>				
+					<include>WP-PanelPortrait</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),Case)</visible>
 					<itemlayout height="305" width="216">
 						<control type="image">
 							<description>Cover</description>
-							<include>WP-PanelImagePortraitCase</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>													
-						</control>						
+							<include>WP-PanelImagePortraitCase</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
+						</control>
 						<control type="image">
 							<description>Case Overlay</description>
-							<include>WP-PanelImagePortraitCaseOverlay</include>	
-							<texture>thumbs/boxes/$VAR[GlobalCaseVar]</texture>													
-						</control>												
+							<include>WP-PanelImagePortraitCaseOverlay</include>
+							<texture>thumbs/boxes/$VAR[GlobalCaseVar]</texture>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="216">
 						<control type="image">
 							<description>Cover</description>
-							<include>WP-PanelImagePortraitCase</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>													
-						</control>						
+							<include>WP-PanelImagePortraitCase</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
+						</control>
 						<control type="image">
 							<description>Case Overlay</description>
-							<include>WP-PanelImagePortraitCaseOverlay</include>	
-							<texture>thumbs/boxes/$VAR[GlobalCaseVar]</texture>													
+							<include>WP-PanelImagePortraitCaseOverlay</include>
+							<texture>thumbs/boxes/$VAR[GlobalCaseVar]</texture>
 						</control>
 						<control type="image">
 							<include>WP-PanelImagePortrait</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>						
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
 				</control>
 				<!-- Clear Case -->
 				<control type="panel" id="8001">
-					<include>WP-PanelPortrait</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),ClearCase)</visible>				
+					<include>WP-PanelPortrait</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),ClearCase)</visible>
 					<itemlayout height="305" width="216">
 						<control type="image">
 							<description>Cover</description>
-							<include>WP-PanelImagePortraitClearCase</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>												
-						</control>						
+							<include>WP-PanelImagePortraitClearCase</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
+						</control>
 						<control type="image">
 							<description>Case Overlay</description>
-							<include>WP-PanelImagePortraitClearCaseOverlay</include>	
-							<texture>thumbs/boxes/clearcases/$VAR[GlobalCaseVar]</texture>													
-						</control>												
+							<include>WP-PanelImagePortraitClearCaseOverlay</include>
+							<texture>thumbs/boxes/clearcases/$VAR[GlobalCaseVar]</texture>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="216">
 						<control type="image">
 							<description>Cover</description>
-							<include>WP-PanelImagePortraitClearCase</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>												
-						</control>						
+							<include>WP-PanelImagePortraitClearCase</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
+						</control>
 						<control type="image">
 							<description>Case Overlay</description>
-							<include>WP-PanelImagePortraitClearCaseOverlay</include>	
-							<texture>thumbs/boxes/clearcases/$VAR[GlobalCaseVar]</texture>													
+							<include>WP-PanelImagePortraitClearCaseOverlay</include>
+							<texture>thumbs/boxes/clearcases/$VAR[GlobalCaseVar]</texture>
 						</control>
 						<control type="image">
 							<include>WP-PanelImagePortrait</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>						
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
 				</control>
 				<!-- Music/App Cover -->
 				<control type="panel" id="8001">
 
-					<include>WP-PanelSquare</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),AlbumAppCover)</visible>				
-					
+					<include>WP-PanelSquare</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),AlbumAppCover)</visible>
+
 					<itemlayout height="305" width="303" condition="!Skin.HasSetting(HomeInfo)">
 						<control type="image">
 							<description>Cover</description>
-							<include>WP-PanelImageSquare</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>											
+							<include>WP-PanelImageSquare</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
 						</control>
 						<control type="image">
 							<description>Fallbaack Music Videos</description>
-							<include>WP-PanelImageSquare</include>	
+							<include>WP-PanelImageSquare</include>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<visible>IsEmpty(ListItem.Art(poster)) +	StringCompare(Container(9000).ListItem.Property(WidgetType),21)</visible>						
-						</control>						
+							<visible>IsEmpty(ListItem.Art(poster)) +	StringCompare(Container(9000).ListItem.Property(WidgetType),21)</visible>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="303" condition="!Skin.HasSetting(HomeInfo)">
 						<control type="image">
 							<description>Cover</description>
-							<include>WP-PanelImageSquare</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>													
+							<include>WP-PanelImageSquare</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
 						</control>
 						<control type="image">
 							<description>Fallback Music Videos</description>
-							<include>WP-PanelImageSquare</include>	
+							<include>WP-PanelImageSquare</include>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<visible>IsEmpty(ListItem.Art(poster)) +	StringCompare(Container(9000).ListItem.Property(WidgetType),21)</visible>						
+							<visible>IsEmpty(ListItem.Art(poster)) +	StringCompare(Container(9000).ListItem.Property(WidgetType),21)</visible>
 						</control>
 						<control type="image">
 							<include>WP-PanelImageSquare</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>										
-					</focusedlayout>										
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
-				</control>				
+				</control>
 				<!-- Music/App Glass Cover -->
 				<control type="panel" id="8001">
-					<include>WP-PanelSquare</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),GlassAlbumAppCover)</visible>				
+					<include>WP-PanelSquare</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),GlassAlbumAppCover)</visible>
 					<itemlayout height="305" width="303">
 						<control type="image">
 							<description>Cover</description>
-							<include>WP-PanelImageSquareGlass</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>													
+							<include>WP-PanelImageSquareGlass</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
 						</control>
 						<control type="image">
 							<description>Fallback Music Videos</description>
-							<include>WP-PanelImageSquareGlass</include>	
+							<include>WP-PanelImageSquareGlass</include>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<visible>IsEmpty(ListItem.Art(poster)) +	StringCompare(Container(9000).ListItem.Property(WidgetType),21)</visible>						
+							<visible>IsEmpty(ListItem.Art(poster)) +	StringCompare(Container(9000).ListItem.Property(WidgetType),21)</visible>
 						</control>
 						<control type="image">
 							<description>Glass Overlay</description>
-							<include>WP-PanelImageSquareGlassOverlay</include>	
-							<texture>thumbs/boxes/cd_shadow_light.png</texture>													
-						</control>												
+							<include>WP-PanelImageSquareGlassOverlay</include>
+							<texture>thumbs/boxes/cd_shadow_light.png</texture>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="303">
 						<control type="image">
 							<description>Music Cover</description>
-							<include>WP-PanelImageSquareGlass</include>	
-							<texture>$VAR[HomeWidgetCoverVar]</texture>													
+							<include>WP-PanelImageSquareGlass</include>
+							<texture>$VAR[HomeWidgetCoverVar]</texture>
 						</control>
 						<control type="image">
 							<description>Fallback Music Videos</description>
-							<include>WP-PanelImageSquareGlass</include>	
+							<include>WP-PanelImageSquareGlass</include>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<visible>IsEmpty(ListItem.Art(poster)) +	StringCompare(Container(9000).ListItem.Property(WidgetType),21)</visible>						
+							<visible>IsEmpty(ListItem.Art(poster)) +	StringCompare(Container(9000).ListItem.Property(WidgetType),21)</visible>
 						</control>
 						<control type="image">
 							<description>Glass Overlay</description>
-							<include>WP-PanelImageSquareGlassOverlay</include>	
-							<texture>thumbs/boxes/cd_shadow_light.png</texture>													
+							<include>WP-PanelImageSquareGlassOverlay</include>
+							<texture>thumbs/boxes/cd_shadow_light.png</texture>
 						</control>
 						<control type="image">
 							<include>WP-PanelImageSquare</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>						
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
-				</control>				
+				</control>
 				<!-- Landscape -->
-				<control type="panel" id="8001">					
-					<include>WP-PanelLandscape</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),Landscape)</visible>				
+				<control type="panel" id="8001">
+					<include>WP-PanelLandscape</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),Landscape)</visible>
 					<itemlayout height="305" width ="504">
 						<control type="image">
 							<description>Landscape</description>
-							<include>WP-PanelImageLandscape</include>	
-							<texture>$VAR[HomeWidgetLandscapeVar]</texture>							
+							<include>WP-PanelImageLandscape</include>
+							<texture>$VAR[HomeWidgetLandscapeVar]</texture>
 						</control>
 						<control type="image">
 							<description>Fallback Fanart</description>
-							<include>WP-PanelImageLandscape</include>	
+							<include>WP-PanelImageLandscape</include>
 							<texture>$VAR[HomeWidgetFanartVar]</texture>
-							<visible>IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(tvshow.landscape))</visible> 
+							<visible>IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(tvshow.landscape))</visible>
 						</control>
 						<control type="image">
 							<description>Fallback Logo</description>
-							<include>WP-PanelImageLandscapeLogoFallback</include>	
+							<include>WP-PanelImageLandscapeLogoFallback</include>
 							<texture>$VAR[HomeWidgetLogoVar]</texture>
 							<visible>IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(tvshow.landscape))</visible>
-						</control>													
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="504">
 						<control type="image">
 							<description>Landscape</description>
-							<include>WP-PanelImageLandscape</include>	
-							<texture>$VAR[HomeWidgetLandscapeVar]</texture>							
+							<include>WP-PanelImageLandscape</include>
+							<texture>$VAR[HomeWidgetLandscapeVar]</texture>
 						</control>
 						<control type="image">
 							<description>Fallback Fanart</description>
-							<include>WP-PanelImageLandscape</include>	
+							<include>WP-PanelImageLandscape</include>
 							<texture>$VAR[HomeWidgetFanartVar]</texture>
-							<visible>IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(tvshow.landscape))</visible> 
+							<visible>IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(tvshow.landscape))</visible>
 						</control>
 						<control type="image">
 							<description>Fallback Logo</description>
-							<include>WP-PanelImageLandscapeLogoFallback</include>	
+							<include>WP-PanelImageLandscapeLogoFallback</include>
 							<texture>$VAR[HomeWidgetLogoVar]</texture>
 							<visible>IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(tvshow.landscape))</visible>
 						</control>
 						<control type="image">
 							<include>WP-PanelImageLandscape</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>						
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
 				</control>
 				<!-- Fanart -->
-				<control type="panel" id="8001">					
-					<include>WP-PanelLandscape</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),FanArt)	</visible>				
+				<control type="panel" id="8001">
+					<include>WP-PanelLandscape</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),FanArt)	</visible>
 					<itemlayout height="305" width ="504">
 						<control type="image">
 							<description>FanArt</description>
-							<include>WP-PanelImageLandscape</include>	
-							<texture>$VAR[HomeWidgetFanartVar]</texture>							
-						</control>																	
+							<include>WP-PanelImageLandscape</include>
+							<texture>$VAR[HomeWidgetFanartVar]</texture>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="504">
 						<control type="image">
 							<description>FanArt</description>
-							<include>WP-PanelImageLandscape</include>	
-							<texture>$VAR[HomeWidgetFanartVar]</texture>							
+							<include>WP-PanelImageLandscape</include>
+							<texture>$VAR[HomeWidgetFanartVar]</texture>
 						</control>
 						<control type="image">
 							<include>WP-PanelImageLandscape</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>						
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
-				</control>				
+				</control>
 				<!-- Fanart with ClearLogo-->
 				<control type="panel" id="8001">
-					<include>WP-PanelLandscape</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),FanArtClearLogo)</visible>				
+					<include>WP-PanelLandscape</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),FanArtClearLogo)</visible>
 					<itemlayout height="305" width ="504">
 						<control type="image">
 							<description>Fanart</description>
-							<include>WP-PanelImageLandscape</include>	
-							<texture colordiffuse="77FFFFFF">$VAR[HomeWidgetFanArtVar]</texture>							
-						</control>						
+							<include>WP-PanelImageLandscape</include>
+							<texture colordiffuse="77FFFFFF">$VAR[HomeWidgetFanArtVar]</texture>
+						</control>
 						<control type="image">
 							<description>Logo</description>
-							<include>WP-PanelImageLogo</include>	
+							<include>WP-PanelImageLogo</include>
 							<texture>$VAR[HomeWidgetLogoVar]</texture>
-						</control>	
+						</control>
 						<control type="textbox">
 							<description>Fallback Text</description>
-							<include>WP-LandscapeTextMid</include>	
+							<include>WP-LandscapeTextMid</include>
 							<label>$INFO[ListItem.title]</label>
-							<visible>IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>						
-						</control>											
+							<visible>IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="504">
 						<control type="image">
 							<description>Fanart</description>
-							<include>WP-PanelImageLandscape</include>	
-							<texture colordiffuse="77FFFFFF">$VAR[HomeWidgetFanArtVar]</texture>							
-						</control>						
+							<include>WP-PanelImageLandscape</include>
+							<texture colordiffuse="77FFFFFF">$VAR[HomeWidgetFanArtVar]</texture>
+						</control>
 						<control type="image">
 							<description>Logo</description>
-							<include>WP-PanelImageLogo</include>	
+							<include>WP-PanelImageLogo</include>
 							<texture>$VAR[HomeWidgetLogoVar]</texture>
-						</control>	
+						</control>
 						<control type="textbox">
 							<description>Fallback Text</description>
-							<include>WP-LandscapeTextMid</include>	
+							<include>WP-LandscapeTextMid</include>
 							<label>$INFO[ListItem.title]</label>
-							<visible>IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>						
+							<visible>IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>
 						</control>
 						<control type="image">
 							<include>WP-PanelImageLandscape</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>										
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
-				</control>				
+				</control>
 				<!-- ClearLogo-->
 				<control type="panel" id="8001">
-					<include>WP-PanelLandscape</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),ClearLogo)</visible>				
-					<itemlayout height="305" width ="504">						
+					<include>WP-PanelLandscape</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),ClearLogo)</visible>
+					<itemlayout height="305" width ="504">
 						<control type="image">
 							<description>Logo</description>
-							<include>WP-PanelImageLogo</include>	
+							<include>WP-PanelImageLogo</include>
 							<texture>$VAR[HomeWidgetLogoVar]</texture>
 						</control>
 						<control type="textbox">
 							<description>Fallback Text</description>
-							<include>WP-LandscapeTextMid</include>	
+							<include>WP-LandscapeTextMid</include>
 							<label>$INFO[ListItem.title]</label>
-							<visible>IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>						
-						</control>																	
+							<visible>IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="504">
 						<control type="image">
 							<description>Logo</description>
-							<include>WP-PanelImageLogo</include>	
+							<include>WP-PanelImageLogo</include>
 							<texture>$VAR[HomeWidgetLogoVar]</texture>
 						</control>
 						<control type="textbox">
 							<description>Fallback Text</description>
-							<include>WP-LandscapeTextMid</include>	
+							<include>WP-LandscapeTextMid</include>
 							<label>$INFO[ListItem.title]</label>
-							<visible>IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>						
+							<visible>IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>
 						</control>
 						<control type="image">
 							<include>WP-PanelImageLandscape</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>										
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
 				</control>
 				<!-- ClearArt -->
 				<control type="panel" id="8001">
-					<include>WP-PanelLandscape</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),ClearArt)</visible>				
+					<include>WP-PanelLandscape</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),ClearArt)</visible>
 					<itemlayout height="305" width ="504">
 						<control type="image">
 							<description>ClearArt</description>
-							<include>WP-PanelImageLogo</include>	
-							<texture>$VAR[HomeWidgetClearArtVar]</texture>												
+							<include>WP-PanelImageLogo</include>
+							<texture>$VAR[HomeWidgetClearArtVar]</texture>
 						</control>
 						<control type="image">
 							<description>Fallback ClearArt</description>
-							<include>WP-PanelImageLogo</include>	
+							<include>WP-PanelImageLogo</include>
 							<texture>$VAR[HomeWidgetLogoVar]</texture>
-							<visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(tvshow.clearart))</visible>						
+							<visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(tvshow.clearart))</visible>
 						</control>
 						<control type="textbox">
 							<description>Fallback Text</description>
-							<include>WP-LandscapeTextMid</include>	
+							<include>WP-LandscapeTextMid</include>
 							<label>$INFO[ListItem.title]</label>
-							<visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(tvshow.clearart)) + IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>						
-						</control>										
+							<visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(tvshow.clearart)) + IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="504">
 						<control type="image">
 							<description>ClearArt</description>
-							<include>WP-PanelImageLogo</include>	
-							<texture>$VAR[HomeWidgetClearArtVar]</texture>												
+							<include>WP-PanelImageLogo</include>
+							<texture>$VAR[HomeWidgetClearArtVar]</texture>
 						</control>
 						<control type="image">
 							<description>Fallback ClearArt</description>
-							<include>WP-PanelImageLogo</include>	
+							<include>WP-PanelImageLogo</include>
 							<texture>$VAR[HomeWidgetLogoVar]</texture>
-							<visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(tvshow.clearart))</visible>						
+							<visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(tvshow.clearart))</visible>
 						</control>
 						<control type="textbox">
 							<description>Fallback Text</description>
-							<include>WP-LandscapeTextMid</include>	
+							<include>WP-LandscapeTextMid</include>
 							<label>$INFO[ListItem.title]</label>
-							<visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(tvshow.clearart)) + IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>						
-						</control>	 
+							<visible>IsEmpty(ListItem.Art(clearart)) + IsEmpty(ListItem.Art(tvshow.clearart)) + IsEmpty(ListItem.Art(tvshow.clearlogo)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+						</control>
 						<control type="image">
 							<include>WP-PanelImageLandscape</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>										
-					</focusedlayout>										
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
-				</control>			
+				</control>
 				<!-- Movie DiscArt -->
 				<control type="panel" id="8001">
-					<include>WP-PanelSquare</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),DiscArt)</visible>				
+					<include>WP-PanelSquare</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),DiscArt)</visible>
 					<itemlayout height="305" width="303">
 						<control type="image">
 							<description>DiscArt</description>
-							<include>WP-PanelImageSquareGlass</include>	
-							<texture>$VAR[HomeWidgetDiscArtVar]</texture>													
-						</control>						
+							<include>WP-PanelImageSquareGlass</include>
+							<texture>$VAR[HomeWidgetDiscArtVar]</texture>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="303">
 						<control type="image">
 							<description>Cover</description>
-							<include>WP-PanelImageSquareGlass</include>	
-							<texture>$VAR[HomeWidgetDiscArtVar]</texture>													
-						</control>						
+							<include>WP-PanelImageSquareGlass</include>
+							<texture>$VAR[HomeWidgetDiscArtVar]</texture>
+						</control>
 						<control type="image">
 							<include>WP-PanelImageSquare</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>										
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
 				</control>
 				<!-- TV Character Art -->
 				<control type="panel" id="8001">
-					<include>WP-PanelSquare</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),CharacterArt)</visible>				
+					<include>WP-PanelSquare</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),CharacterArt)</visible>
 					<itemlayout height="305" width="303">
 						<control type="image">
 							<description>Character Art</description>
-							<include>WP-PanelImageSquareGlass</include>	
-							<texture>$VAR[HomeWidgetCharacterArtVar]</texture>													
+							<include>WP-PanelImageSquareGlass</include>
+							<texture>$VAR[HomeWidgetCharacterArtVar]</texture>
 						</control>
 						<control type="image">
 							<description>TV Logo</description>
-							<include>WP-PanelImageLogoSquare</include>	
-							<texture>$VAR[HomeWidgetLogoVar]</texture>															
-						</control>						
+							<include>WP-PanelImageLogoSquare</include>
+							<texture>$VAR[HomeWidgetLogoVar]</texture>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="303">
 						<control type="image">
 							<description>Character Art</description>
-							<include>WP-PanelImageSquareGlass</include>	
-							<texture>$VAR[HomeWidgetCharacterArtVar]</texture>													
+							<include>WP-PanelImageSquareGlass</include>
+							<texture>$VAR[HomeWidgetCharacterArtVar]</texture>
 						</control>
 						<control type="image">
 							<description>TV Logo</description>
-							<include>WP-PanelImageLogoSquare</include>	
-							<texture>$VAR[HomeWidgetLogoVar]</texture>															
-						</control>							
+							<include>WP-PanelImageLogoSquare</include>
+							<texture>$VAR[HomeWidgetLogoVar]</texture>
+						</control>
 						<control type="image">
 							<include>WP-PanelImageSquare</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>										
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
 				</control>
 				<!-- Banner -->
 				<control type="panel" id="8001">
-					<include>WP-PanelBanner</include>	
-					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),Banner)</visible>				
+					<include>WP-PanelBanner</include>
+					<visible>StringCompare(Container(9000).ListItem.Property(WidgetStyle),Banner)</visible>
 					<itemlayout height="155" width ="757">
 						<control type="image">
 							<description>Banner</description>
-							<include>WP-PanelImageBanner</include>	
-							<texture>$VAR[HomeWidgetBannerVar]</texture>														
+							<include>WP-PanelImageBanner</include>
+							<texture>$VAR[HomeWidgetBannerVar]</texture>
 						</control>
 						<control type="image">
 							<description>Fanart Fallback</description>
 							<include>WP-PanelImageBanner</include>
-							<aspectratio aligny="center">scale</aspectratio>						
+							<aspectratio aligny="center">scale</aspectratio>
 							<texture>$VAR[HomeWidgetFanartVar]</texture>
-							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>							
+							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
 						</control>
 						<control type="image">
 							<description>Logo Fallback</description>
 							<include>WP-PanelImageBanner</include>
-							<aspectratio aligny="center">keep</aspectratio>						
+							<aspectratio aligny="center">keep</aspectratio>
 							<texture>$VAR[HomeWidgetLogoVar]</texture>
-							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>						
+							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
 						</control>
 						<control type="label">
 							<description>Text Fallback</description>
-							<include>WP-BannerText</include>	
+							<include>WP-BannerText</include>
 							<label>$INFO[ListItem.title]</label>
-							<visible>IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>						
-						</control>															
+							<visible>IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+						</control>
 					</itemlayout>
 					<focusedlayout height="305" width="504">
 						<control type="image">
 							<description>Banner</description>
-							<include>WP-PanelImageBanner</include>	
-							<texture>$VAR[HomeWidgetBannerVar]</texture>														
+							<include>WP-PanelImageBanner</include>
+							<texture>$VAR[HomeWidgetBannerVar]</texture>
 						</control>
 						<control type="image">
 							<description>Fanart Fallback</description>
 							<include>WP-PanelImageBanner</include>
-							<aspectratio aligny="center">scale</aspectratio>						
+							<aspectratio aligny="center">scale</aspectratio>
 							<texture>$VAR[HomeWidgetFanartVar]</texture>
-							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>							
+							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
 						</control>
 						<control type="image">
 							<description>Logo Fallback</description>
 							<include>WP-PanelImageBanner</include>
-							<aspectratio aligny="center">keep</aspectratio>						
+							<aspectratio aligny="center">keep</aspectratio>
 							<texture>$VAR[HomeWidgetLogoVar]</texture>
-							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>						
+							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
 						</control>
 						<control type="label">
 							<description>Text Fallback</description>
-							<include>WP-BannerText</include>	
+							<include>WP-BannerText</include>
 							<label>$INFO[ListItem.title]</label>
-							<visible>IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>						
-						</control>	
+							<visible>IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+						</control>
 						<control type="image">
 							<include>WP-PanelImageBanner</include>
-							<include>WP-FocusImageTexture</include>													
-						</control>										
-					</focusedlayout>			
+							<include>WP-FocusImageTexture</include>
+						</control>
+					</focusedlayout>
 					<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
-				</control>			
+				</control>
 			</control>
 
 
@@ -993,15 +993,15 @@
 
 		</control>
 	</include>
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
 	<include name="NowPlayingVideoWidget">
 		<!-- Video Info -->
 		<control type="group">

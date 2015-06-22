@@ -892,6 +892,15 @@
 		<value condition="StringCompare(Skin.String(MediaflagsLayout),$LOCALIZE[571])">Skin.SetString(MediaflagsLayout,$LOCALIZE[31160])</value>
 		<value condition="StringCompare(Skin.String(MediaflagsLayout),$LOCALIZE[31160])">Skin.Reset(MediaflagsLayout)</value>
 	</variable>
+	<variable name="TriPanelLayoutLabelVar">
+		<value condition="!IsEmpty(Skin.String(TriPanelLayout))">$INFO[Skin.String(TriPanelLayout)]</value>
+		<value>$LOCALIZE[571]</value>
+	</variable>
+	<variable name="TriPanelLayoutOnclickVar">
+		<value condition="IsEmpty(Skin.String(TriPanelLayout))">Skin.SetString(TriPanelLayout,Default)</value>
+		<value condition="StringCompare(Skin.String(TriPanelLayout),Default)">Skin.SetString(TriPanelLayout,Alternate)</value>
+		<value condition="StringCompare(Skin.String(TriPanelLayout),Alternate)">Skin.SetString(TriPanelLayout,Default)</value>
+	</variable>
 	<variable name="LibraryStructureVar">
 		<value condition="Stringcompare(Skin.String(LibraryStructure),1)">$LOCALIZE[557]/$LOCALIZE[558]/</value>
 		<value condition="Stringcompare(Skin.String(LibraryStructure),2)">$LOCALIZE[557]/$LOCALIZE[562] - $LOCALIZE[558]/</value>
