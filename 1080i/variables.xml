@@ -13,8 +13,8 @@
 	</variable>
 	<variable name="HomeBackgroundVar">
 		<value condition="!IsEmpty(Container(8001).ListItem.Art(fanart)) + Control.HasFocus(8001)">$INFO[Container(8001).ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(Container(8001).ListItem.Art(fanart)) + Control.IsVisible(8052)">$INFO[Container(8001).ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(Container(8001).ListItem.Art(fanart)) + Control.IsVisible(8072)">$INFO[Container(8001).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(8001).ListItem.Art(fanart)) + Control.HasFocus(8052)">$INFO[Container(8001).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(8001).ListItem.Art(fanart)) + Control.HasFocus(8072)">$INFO[Container(8001).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container(8000).ListItem.Art(fanart)) + Control.HasFocus(8000)">$INFO[Container(8000).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container(8005).ListItem.Art(fanart)) + Control.HasFocus(8005)">$INFO[Container(8005).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container(8010).ListItem.Art(fanart)) + Control.HasFocus(8010)">$INFO[Container(8010).ListItem.Art(fanart)]</value>
@@ -472,7 +472,7 @@
 	<variable name="SlimListSettingVar">
 		<value condition="Skin.HasSetting(Enable.SlimList)">$LOCALIZE[31095]</value>
 		<value>$LOCALIZE[571]</value>
-	</variable>	
+	</variable>
 	<variable name="InfoLineLabelVar">
 		<value condition="StringCompare(Container(90000).ListItem.Property(InfoLine),1)">$LOCALIZE[31052]</value>
 		<value condition="StringCompare(Container(90000).ListItem.Property(InfoLine),2)">$LOCALIZE[31053]</value>
@@ -785,7 +785,7 @@
 	<variable name="VideoSubLabelVar">
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Property(TotalEpisodes),[COLOR labelheader]$LOCALIZE[20360]: [/COLOR]]$INFO[ListItem.Property(UnWatchedEpisodes), (,[LOWERCASE] $LOCALIZE[16101][/LOWERCASE])]</value>
 		<value>$INFO[ListItem.Year,, • ]$INFO[ListItem.RatingAndVotes,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.Endtime, • $LOCALIZE[19127]: ,]</value>
-	</variable>	
+	</variable>
 	<variable name="AudioChannelVar">
 		<value condition="IntegerGreaterThan(VideoPlayer.AudioChannels,7)">7.1</value>
 		<value condition="IntegerGreaterThan(VideoPlayer.AudioChannels,6)">6.1</value>
@@ -869,7 +869,7 @@
 		<value condition="Container.Content(movies) + !IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.Tagline,[COLOR labelheader],[/COLOR] - ]$INFO[ListItem.PlotOutline]</value>
 		<value condition="Container.Content(movies) + IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.Tagline,[COLOR labelheader],[/COLOR] - ]$INFO[ListItem.Plot]</value>
 		<value>$INFO[ListItem.Plot]</value>
-	</variable>	
+	</variable>
 	<variable name="SelectCaseVar">
 		<value condition="Skin.HasSetting(useclearcases)">Clear</value>
 		<value>$LOCALIZE[571]</value>
@@ -901,7 +901,7 @@
 	<!-- Widgets -->
 	<variable name="WidgetListTargetVar">
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">video</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">music</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">music</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">video</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5)">video</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),7)">pictures</value>
@@ -909,7 +909,7 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">music</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),10)">video</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">video</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">music</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">music</value>
 	</variable>
 	<variable name="WidgetListContent">
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),2)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
@@ -953,16 +953,16 @@
 		<value condition="!IsEmpty(Container(8001).ListItem.Art(poster)) + StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Art(poster)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">$INFO[ListItem.Art(thumb)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),40)">$INFO[ListItem.Art(poster)]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),40)">$INFO[ListItem.Art(poster)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[ListItem.Art(poster)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),42)">$INFO[ListItem.Art(poster)]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),42)">$INFO[ListItem.Art(poster)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),43)">$INFO[ListItem.Art(poster)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),44)">$INFO[ListItem.Art(poster)]</value>		
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),45)">$INFO[ListItem.Art(thumb)]</value>		
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),47)">$INFO[ListItem.Art(thumb)]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),44)">$INFO[ListItem.Art(poster)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),45)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),47)">$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 	<variable name="HomeWidgetLandscapeVar">
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[ListItem.Art(landscape)]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[ListItem.Art(landscape)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[ListItem.Art(tvshow.landscape)]</value>
 		<value condition="!IsEmpty(Container(8001).ListItem.Art(landscape)) + StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Art(landscape)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Art(tvshow.landscape)]</value>
@@ -973,15 +973,15 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),7)">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),8)">$INFO[ListItem.Art(fanart)]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),8)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),42)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),43)">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),44)">$INFO[ListItem.Art(fanart)]</value>			
-	</variable>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),44)">$INFO[ListItem.Art(fanart)]</value>
+	</variable>
 	<variable name="HomeWidgetLogoVar">
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[ListItem.Art(clearlogo)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">$INFO[Skin.String(pathlogosartists)]$INFO[ListItem.Artist]/logo.png</value>
@@ -993,37 +993,37 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">$INFO[Skin.String(pathlogosartists)]$INFO[ListItem.Artist]/logo.png</value>
 	</variable>
 	<variable name="HomeWidgetClearArtVar">
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[ListItem.Art(clearart)]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[ListItem.Art(clearart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[ListItem.Art(tvshow.clearart)]</value>
 		<value condition="!IsEmpty(Container(8001).ListItem.Art(clearart)) + StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Art(clearart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Art(tvshow.clearart)]</value>
 	</variable>
-	<variable name="HomeWidgetDiscArtVar">		
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[ListItem.Art(discart)]</value>	
+	<variable name="HomeWidgetDiscArtVar">
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[ListItem.Art(discart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),2)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]\$INFO[Container(8001).ListItem.Year] - $INFO[Container(8001).ListItem.Album,,\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),3)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]\$INFO[Container(8001).ListItem.Album] $INFO[Container(8001).ListItem.Year,(,)\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist] - $INFO[Container(8001).ListItem.Album] $INFO[Container(8001).ListItem.Year,(,)\cdart.png]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.AlbumArtist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]\$INFO[ListItem.Album,,\cdart.png]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.AlbumArtist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]\$INFO[ListItem.Album,,\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),2)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]\$INFO[Container(8001).ListItem.Year] - $INFO[Container(8001).ListItem.Album,,\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),3)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]\$INFO[Container(8001).ListItem.Album] $INFO[Container(8001).ListItem.Year,(,)\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist] - $INFO[Container(8001).ListItem.Album] $INFO[Container(8001).ListItem.Year,(,)\cdart.png]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.AlbumArtist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]\$INFO[ListItem.Album,,\cdart.png]</value>		
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[ListItem.Path,,\cdart.png]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.AlbumArtist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]\$INFO[ListItem.Album,,\cdart.png]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[ListItem.Path,,\cdart.png]</value>
 	</variable>
-	<variable name="HomeWidgetCharacterArtVar">		
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[ListItem.Art(tvshow.characterart)]</value>	
+	<variable name="HomeWidgetCharacterArtVar">
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[ListItem.Art(tvshow.characterart)]</value>
 	</variable>
 	<variable name="HomeWidgetBannerVar">
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[ListItem.Art(banner)]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[ListItem.Art(banner)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),2)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]\$INFO[Container(8001).ListItem.Year] - $INFO[Container(8001).ListItem.Album,,\banner.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),3)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]\$INFO[Container(8001).ListItem.Album] $INFO[Container(8001).ListItem.Year,(,)\banner.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist] - $INFO[Container(8001).ListItem.Album] $INFO[Container(8001).ListItem.Year,(,)\banner.png]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.AlbumArtist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]\$INFO[ListItem.Album,,\cdart.png]</value>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.AlbumArtist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]\$INFO[ListItem.Album,,\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),2)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]\$INFO[Container(8001).ListItem.Year] - $INFO[Container(8001).ListItem.Album,,\banner.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),3)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]\$INFO[Container(8001).ListItem.Album] $INFO[Container(8001).ListItem.Year,(,)\banner.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist] - $INFO[Container(8001).ListItem.Album] $INFO[Container(8001).ListItem.Year,(,)\banner.png]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.AlbumArtist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]\$INFO[ListItem.Album,,\banner.png]</value>		
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[ListItem.Path,,\banner.png]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.AlbumArtist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]\$INFO[ListItem.Album,,\banner.png]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[ListItem.Path,,\banner.png]</value>
 		<value condition="!IsEmpty(Container(8001).ListItem.Art(banner)) + StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Art(banner)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[ListItem.Art(tvshow.banner)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),43)">$INFO[ListItem.Art(banner)]</value>
@@ -1037,7 +1037,7 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),8)">$INFO[Container(8001).ListItem.Art(thumb)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[Container(8001).ListItem.Art(thumb)]</value>
 		<value condition="!IsEmpty(Container(8001).ListItem.Art(poster)) + StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.Art(poster)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.Art(tvshow.poster)]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.Art(tvshow.poster)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">$INFO[Container(8001).ListItem.Art(thumb)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),40)">$INFO[Container(8001).ListItem.Art(poster)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[Container(8001).ListItem.Art(poster)]</value>
@@ -1047,17 +1047,17 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),45)">$INFO[Container(8001).ListItem.Property(googlemap)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),47)">$INFO[Container(8001).ListItem.Art(thumb)]</value>
 	</variable>
-	<variable name="HomeInfoDiscArtVar">		
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8001).ListItem.Art(discart)]</value>	
+	<variable name="HomeInfoDiscArtVar">
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8001).ListItem.Art(discart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.Artist) + Stringcompare(Skin.String(LibraryStructure),2)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]$INFO[Container(8001).ListItem.Year,\, - ]$INFO[Container(8001).ListItem.Label,,\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.Artist) + Stringcompare(Skin.String(LibraryStructure),3)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]$INFO[Container(8001).ListItem.Label,\, ]$INFO[Container(8001).ListItem.Year,(,)\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.Artist) + Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]$INFO[Container(8001).ListItem.Label, - , ]$INFO[Container(8001).ListItem.Year,(,)\cdart.png]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.Artist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]$INFO[ListItem.Label,\,\cdart.png]</value>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2) + !IsEmpty(Container(8001).ListItem.Artist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]$INFO[ListItem.Label,\,\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.Artist) + Stringcompare(Skin.String(LibraryStructure),2)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]$INFO[Container(8001).ListItem.Year,\, - ]$INFO[Container(8001).ListItem.Album,,\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.Artist) + Stringcompare(Skin.String(LibraryStructure),3)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]$INFO[Container(8001).ListItem.Label,\, ]$INFO[Container(8001).ListItem.Year,(,)\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.Artist) + Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]$INFO[Container(8001).ListItem.Label, - , ]$INFO[Container(8001).ListItem.Year,(,)\cdart.png]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.Artist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]$INFO[ListItem.Album,\,\cdart.png]</value>		
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[Container(8001).ListItem.Path,,cdart.png]</value>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5) + !IsEmpty(Container(8001).ListItem.Artist)">$INFO[Skin.String(pathlogoartists)]$INFO[ListItem.Artist]$INFO[ListItem.Album,\,\cdart.png]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[Container(8001).ListItem.Path,,cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.Art(discart)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21) + !IsEmpty(Container(8001).Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),2)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]\$INFO[Container(8001).ListItem.Year] - $INFO[Container(8001).ListItem.Album,,\cdart.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21) + !IsEmpty(Container(8001).Container(8001).ListItem.AlbumArtist) + Stringcompare(Skin.String(LibraryStructure),3)">$INFO[Skin.String(pathlogosartists)]$INFO[Container(8001).ListItem.Artist]\$INFO[Container(8001).ListItem.Album] $INFO[Container(8001).ListItem.Year,(,)\cdart.png]</value>
@@ -1067,7 +1067,7 @@
 	</variable>
 	<variable name="HomeInfoTitleVar">
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8001).ListItem.Label]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">$INFO[Container(8001).ListItem.Label]</value>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">$INFO[Container(8001).ListItem.Label]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[Container(8001).ListItem.Label]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5)">$INFO[Container(8001).ListItem.Label]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),7)">$INFO[Container(8001).ListItem.Label]</value>
@@ -1076,40 +1076,40 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.Label]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">$INFO[Container(8001).ListItem.Label]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),40)">$INFO[Container(8001).ListItem.Label]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[Container(8001).ListItem.Label]</value>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[Container(8001).ListItem.Label]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),42)">$INFO[Container(8001).ListItem.Label]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),43)">$INFO[Container(8001).ListItem.Label]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),44)">$INFO[Container(8001).ListItem.Label]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),45)">$INFO[Container(8001).ListItem.Property(name)]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),45)">$INFO[Container(8001).ListItem.Property(name)]</value>
 	</variable>
 	<variable name="HomeInfoSubTitleVar">
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8001).ListItem.Tagline]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">$INFO[Container(8001).ListItem.Artist]</value>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">$INFO[Container(8001).ListItem.Artist]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[Container(8001).ListItem.TvShowTitle]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5)">$INFO[Container(8001).ListItem.Artist]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),7)">$INFO[Container(8001).ListItem.Property(Addon.Summary)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),8)">$INFO[Container(8001).ListItem.Property(Addon.Summary)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[Container(8001).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(8001).ListItem.Genre) + StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.Tagline]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.TvShowTitle]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.TvShowTitle]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">$INFO[Container(8001).ListItem.Artist]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),40)">$INFO[Container(9000).ListItem.Property(WidgetLabel)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[Container(9000).ListItem.Property(WidgetLabel)]</value>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[Container(9000).ListItem.Property(WidgetLabel)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),42)">$INFO[Container(9000).ListItem.Property(WidgetLabel)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),43)">$INFO[Container(9000).ListItem.Property(WidgetLabel)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),44)">$INFO[Container(9000).ListItem.Property(WidgetLabel)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),45)">$INFO[Container(8001).ListItem.Property(artists)]</value>	
-	</variable>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),45)">$INFO[Container(8001).ListItem.Property(artists)]</value>
+	</variable>
 	<variable name="HomeInfoFlag1Var">
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8001).ListItem.Year]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">$INFO[Container(8001).ListItem.Year]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">$INFO[Container(8001).ListItem.Year]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[Container(8001).ListItem.Year]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5)">$INFO[Container(8001).ListItem.Year]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),7)">$INFO[Container(8001).ListItem.Property(Addon.Version)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),8)">$INFO[Container(8001).ListItem.Property(Addon.Version)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[Container(8001).ListItem.Year]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.Year]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">$INFO[Container(8001).ListItem.Year]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">$INFO[Container(8001).ListItem.Year]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),40)">$INFO[Container(8001).ListItem.Property(Year)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[Container(8001).ListItem.Property(Year)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),42)">$INFO[Container(8001).ListItem.Property(Year)]</value>
@@ -1123,7 +1123,7 @@
 		<value condition="!Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$VAR[HomeRatingFlagVar]</value>
 		<value condition="Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$VAR[HomeColoredRatingFlagVar]</value>
 		<value condition="Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$VAR[HomeColoredRatingFlagVar]</value>
-		<value condition="Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$VAR[HomeColoredRatingFlagVar]</value>		
+		<value condition="Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$VAR[HomeColoredRatingFlagVar]</value>
 		<value condition="!Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),40)">$INFO[Container(8001).ListItem.Property(mpaa),flags/mpaa/,.png]</value>
 		<value condition="!Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[Container(8001).ListItem.Property(mpaa),flags/mpaa/,.png]</value>
 		<value condition="!Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),42)">$INFO[Container(8001).ListItem.Property(mpaa),flags/mpaa/,.png]</value>
@@ -1141,7 +1141,7 @@
 		<value condition="!Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8001).ListItem.Studio,flags/studios/,.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">$INFO[Container(8001).ListItem.Property(Album_Label),flags/music/recordlabel/,.png]</value>
 		<value condition="!Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[Container(8001).ListItem.Studio,flags/studios/,.png]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5)">$INFO[Container(8001).ListItem.Studio,flags/music/recordlabel/,.png]</value>		
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5)">$INFO[Container(8001).ListItem.Studio,flags/music/recordlabel/,.png]</value>
 		<value condition="!Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),20)">,.png]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">$INFO[Container(8001).ListItem.Property(Album_Label),flags/music/recordlabel/,.png]</value>
 		<value condition="!Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),40)">$INFO[Container(8001).ListItem.Studio,flags/studios/,.png]</value>
@@ -1155,7 +1155,7 @@
 		<value condition="Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[Container(8001).ListItem.Studio,flags/colored/studios/,.png]</value>
 		<value condition="Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),42)">$INFO[Container(8001).ListItem.Studio,flags/colored/studios/,.png]</value>
 		<value condition="Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),43)">$INFO[Container(8001).ListItem.Studio,flags/colored/studios/,.png]</value>
-	</variable>	
+	</variable>
 	<variable name="HomeInfoFlag4Var">
 		<value condition="!Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8001).ListItem.VideoCodec,flags/video/,.png]</value>
 		<value condition="!Skin.HasSetting(coloredflags) + StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[Container(8001).ListItem.VideoCodec,flags/video/,.png]</value>
@@ -1302,7 +1302,7 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),42)">$INFO[Container(8001).ListItem.Property(duration),, [LOWERCASE]$LOCALIZE[12391][/LOWERCASE]]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),43)">$INFO[Container(8001).ListItem.Property(duration),, [LOWERCASE]$LOCALIZE[12391][/LOWERCASE]]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),44)">$INFO[Container(8001).ListItem.Property(duration),, [LOWERCASE]$LOCALIZE[12391][/LOWERCASE]]</value>
-	</variable>	
+	</variable>
 	<variable name="HomeInfoIcon13TextVar">
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8001).ListItem.Rating,Rating ,/10]$INFO[Container(8001).ListItem.Votes, (, votes)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[Container(8001).ListItem.Rating,Rating ,/10]$INFO[Container(8001).ListItem.Votes, (, votes)]</value>
@@ -1324,14 +1324,14 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),44)">$INFO[Container(8001).ListItem.Genre]</value>
 	</variable>
 	<variable name="HomeInfoPlotVar">
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8001).ListItem.Plot]</value>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8001).ListItem.Plot]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),2)">$INFO[Container(8001).ListItem.Property(Album_Description)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),4)">$INFO[Container(8001).ListItem.Plot]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),5)">$INFO[Container(8001).ListItem.Plot]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),7)">$INFO[Container(8001).ListItem.Property(Addon.Description)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),8)">$INFO[Container(8001).ListItem.Property(Addon.Description)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),9)">$INFO[Container(8001).ListItem.Property(Album_Description)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.Plot]</value>	
+		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),20)">$INFO[Container(8001).ListItem.Plot]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),21)">$INFO[Container(8001).ListItem.Property(Artist_Description)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),40)">$INFO[Container(8001).ListItem.Plot]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(WidgetType),41)">$INFO[Container(8001).ListItem.Plot]</value>
